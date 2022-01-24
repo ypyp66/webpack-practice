@@ -8,14 +8,9 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
-    chunkFilename: "[id].chunk.js",
+    chunkFilename: "[name].chunk.js",
     path: path.resolve(__dirname, "dist"),
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./template/index.html",
-    }),
-  ],
+  plugins: [new CleanWebpackPlugin()],
   mode: "production",
 };
